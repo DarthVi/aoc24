@@ -1,0 +1,15 @@
+{
+  "name": "aoc24",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/bun": "^1.1.14",
+    "typescript": "^5.5.3"
+  },
+  "private": true
+}
