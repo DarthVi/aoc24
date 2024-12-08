@@ -2,7 +2,7 @@ export async function day2(path: string) {
   return { part1: await day2_part1(path), part2: await day2_part2(path) };
 }
 
-export async function day2_part1(path: string) {
+async function day2_part1(path: string) {
   const arr = (await readFile(path)).map((entry) =>
     entry.map((num) => parseInt(num)),
   );
@@ -15,7 +15,7 @@ export async function day2_part1(path: string) {
     .reduce((a, b) => a + b);
 }
 
-export async function day2_part2(path: string) {
+async function day2_part2(path: string) {
   const arr = (await readFile(path)).map((entry) =>
     entry.map((num) => parseInt(num)),
   );
@@ -49,7 +49,7 @@ async function readFile(path: string) {
     .map((line) => line.trim().split(" "));
 }
 
-export function monotone(arr: number[]): boolean {
+function monotone(arr: number[]): boolean {
   return (
     arr.every((entry, index) =>
       index !== arr.length - 1 ? entry < arr[index + 1] : true,
@@ -60,11 +60,7 @@ export function monotone(arr: number[]): boolean {
   );
 }
 
-export function adjacentConstraint(
-  arr: number[],
-  min: number,
-  max: number,
-): boolean {
+function adjacentConstraint(arr: number[], min: number, max: number): boolean {
   const tol = 0;
   return arr.every((entry, index) =>
     index !== arr.length - 1
